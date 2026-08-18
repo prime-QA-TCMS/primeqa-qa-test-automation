@@ -1,0 +1,26 @@
+{
+  "name": "@primeqa/qa-test-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prime QA TCMS cross-layer automated test orchestration",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:ui": "playwright test --grep @ui",
+    "test:api": "playwright test --grep @api",
+    "test:cross-layer": "playwright test --grep @cross-layer",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@primeqa/qa-api-engine": "github:prime-QA-TCMS/primeqa-qa-api-engine",
+    "@primeqa/qa-ui-engine": "github:prime-QA-TCMS/primeqa-qa-ui-engine"
+  },
+  "devDependencies": {
+    "@playwright/test": ">=1.50.0 <2.0.0",
+    "typescript": ">=5.7.0 <6.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
